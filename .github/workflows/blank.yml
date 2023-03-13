@@ -27,6 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: ansible-playbook -i inventory.ini rabbitmq-vhost.yml
+        run: ansible-playbook playbook.yml
 
 
