@@ -1,0 +1,12 @@
+- name: Create RabbitMQ vhost
+  hosts: localhost
+  tasks:
+    - name: Install RabbitMQ management plugin
+      become: yes
+      apt:
+        name: rabbitmq-server
+        state: present
+    - name: Enable RabbitMQ management plugin
+      become: yes
+      shell: rabbitmq-plugins enable rabbitmq_management
+
